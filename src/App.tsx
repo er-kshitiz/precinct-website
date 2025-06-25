@@ -8,17 +8,19 @@ import FamilyFriendlyPage from './pages/FamilyFriendlyPage';
 import FunctionsPage from './pages/FunctionsPage';
 import ContactPage from './pages/ContactPage';
 import MenuItemPage from './pages/MenuItemPage';
-import UnderConstruction from './pages/UnderConstruction';
+// import UnderConstruction from './pages/UnderConstruction';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <Router>
       <Routes>
         {/* This route does NOT use Layout */}
-        <Route path="/" element={<UnderConstruction />} />
+        {/* <Route path="/" element={<UnderConstruction />} /> */}
 
         {/* This route uses Layout for all nested routes */}
         <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
           <Route path="/menu/food" element={<FoodMenuPage />} />
           <Route path="/menu/drinks" element={<DrinksMenuPage />} />
           <Route path="/menu/item/:id" element={<MenuItemPage />} />
