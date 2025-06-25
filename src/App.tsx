@@ -14,22 +14,20 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Route without layout */}
+        {/* This route does NOT use Layout */}
         <Route path="/" element={<UnderConstruction />} />
 
-        {/* Routes with layout */}
-        <Layout>
-          <Route>
-            <Route path="/menu/food" element={<FoodMenuPage />} />
-            <Route path="/menu/drinks" element={<DrinksMenuPage />} />
-            <Route path="/menu/item/:id" element={<MenuItemPage />} />
-            <Route path="/whats-on" element={<WhatsOnPage />} />
-            <Route path="/dining" element={<DiningPage />} />
-            <Route path="/family-friendly" element={<FamilyFriendlyPage />} />
-            <Route path="/functions" element={<FunctionsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Route>
-        </Layout>
+        {/* This route uses Layout for all nested routes */}
+        <Route element={<Layout />}>
+          <Route path="/menu/food" element={<FoodMenuPage />} />
+          <Route path="/menu/drinks" element={<DrinksMenuPage />} />
+          <Route path="/menu/item/:id" element={<MenuItemPage />} />
+          <Route path="/whats-on" element={<WhatsOnPage />} />
+          <Route path="/dining" element={<DiningPage />} />
+          <Route path="/family-friendly" element={<FamilyFriendlyPage />} />
+          <Route path="/functions" element={<FunctionsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
       </Routes>
     </Router>
   );
