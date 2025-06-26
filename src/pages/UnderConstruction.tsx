@@ -10,13 +10,6 @@ const UnderConstruction: React.FC = () => {
                     <p className="text-taupe-700 font-poppins text-lg mb-6">
                         We’re currently working on building something amazing. Please check back soon!
                     </p>
-                    <div className="text-center">
-                        <img
-                            src="https://cdn-icons-png.flaticon.com/512/3195/3195023.png"
-                            alt="Under Construction"
-                            className="w-48 h-48 mx-auto"
-                        />
-                    </div>
                 </div>
             </div>
         </div>
